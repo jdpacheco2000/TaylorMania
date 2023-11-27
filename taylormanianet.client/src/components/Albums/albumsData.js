@@ -4,6 +4,7 @@ const albumsData = [
     id: 1,
     title: 'Taylor Swift',
     artist: 'Taylor Swift',
+    color: '#008000',
     songs: [
       { id: 101, title: 'Tim McGraw' },
       { id: 102, title: 'Picture To Burn' },
@@ -25,6 +26,7 @@ const albumsData = [
     id: 2,
     title: 'Fearless',
     artist: 'Taylor Swift',
+    color: '#ffff00',
     songs: [
       { id: 201, title: 'Fearless' },
       { id: 202, title: 'Fifteen' },
@@ -58,6 +60,7 @@ const albumsData = [
     id: 3,
     title: 'Speak Now',
     artist: 'Taylor Swift',
+    color: '#800080',
     songs: [
       { id: 301, title: 'Mine' },
       { id: 302, title: 'Sparks Fly' },
@@ -90,6 +93,7 @@ const albumsData = [
     id: 4,
     title: 'Red',
     artist: 'Taylor Swift',
+    color: '#ff0000',
     songs: [
       { id: 401, title: 'State of Grace' },
       { id: 402, title: 'Red' },
@@ -129,6 +133,7 @@ const albumsData = [
     id: 5,
     title: '1989',
     artist: 'Taylor Swift',
+    color: '#add8e6',
     songs: [
       { id: 501, title: 'Welcome to New York' },
       { id: 502, title: 'Blank Space' },
@@ -158,6 +163,7 @@ const albumsData = [
     id: 6,
     title: 'reputation',
     artist: 'Taylor Swift',
+    color: '#000000',
     songs: [
       { id: 601, title: '…Ready For it?' },
       { id: 602, title: 'End Game' },
@@ -180,6 +186,7 @@ const albumsData = [
     id: 7,
     title: 'Lover',
     artist: 'Taylor Swift',
+    color: '#ffc0cb',
     songs: [
       { id: 701, title: 'I Forgot That You Existed' },
       { id: 702, title: 'Cruel Summer' },
@@ -206,6 +213,7 @@ const albumsData = [
     id: 8,
     title: 'folklore',
     artist: 'Taylor Swift',
+    color: '#d3d3d3',
     songs: [
       { id: 801, title: 'the 1' },
       { id: 802, title: 'cardigan' },
@@ -230,6 +238,7 @@ const albumsData = [
     id: 9,
     title: 'evermore',
     artist: 'Taylor Swift',
+    color: '#a52a2a',
     songs: [
       { id: 901, title: 'willow' },
       { id: 902, title: 'champagne problems' },
@@ -254,6 +263,7 @@ const albumsData = [
     id: 10,
     title: 'Midnights',
     artist: 'Taylor Swift',
+    color: '#0000ff',
     songs: [
       { id: 1001, title: 'Lavender Haze' },
       { id: 1002, title: 'Maroon' },

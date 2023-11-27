@@ -1,8 +1,8 @@
 import Navbar from './components/Navbar';
 import Home from './components/Home/Home'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Create from './Blog/Create';
-import BlogDetails from './Blog/BlogDetails';
+import Create from './components/Blog/Create';
+import BlogDetails from './components/Blog/BlogDetails';
 import NotFound from './components/NotFound';
 import RatingPage from './components/Ratings/RatingPage';
 import albumsData from './components/Albums/albumsData';

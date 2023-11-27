@@ -1,6 +1,11 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+/* Your global stylesheet or the specific component stylesheet */
+:root {
+    --bs-heading-color: rgb(179, 7, 185);
+}
+
 /* Base Styles */
 * {
     margin: 0;
@@ -9,11 +14,16 @@
 }
 
 /* Navbar Styles */
+.icon-container {
+    margin-right: -10px; /* Adjust as needed to move it to the right */
+    margin-bottom: -10px; /* Adjust as needed to move it down */
+} 
+
 .navbar {
     padding: 20px;
     display: flex;
     align-items: center;
-    max-width: 600px;
+    max-width: 1920px;
     margin: 0 auto;
     border-bottom: 1px solid #f2f2f2;
 }
@@ -68,9 +78,14 @@
 
 /* Content Styles */
 .content {
-    max-width: 600px;
-    margin: 40px auto;
+    max-width: 1920px;
+    margin: 20px auto;
     padding: 20px;
+}
+
+.home {
+    /* Add or adjust styles as needed */
+    /* shares with .content*/
 }
 
 /* Blog Previews Styles */
@@ -171,24 +186,44 @@
 .rating-page {
     display: flex;
     flex-direction: column;
-    
 }
 
 .rating-page h2 {
-    color:rgb(128, 5, 97);
-    margin-bottom: 10px;
+    color: rgb(12, 5, 97) !important; /* Add !important to override Bootstrap styles */
+    margin-bottom: 3rem;
 }
 
-.rating-page label {
-    display: block;
-    margin-bottom: 10px;
+/* Increase specificity to override Bootstrap styles */
+.rating-page h2.mb-4 {
+    color: var(--bs-heading-color);
+    margin-bottom: 3rem;
 }
 
-.rating-page input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
+/* Use Bootstrap card styles for the card container */
+.rating-page .card {
+    border: none;
 }
+
+.rating-page .card-title {
+    color: rgb(128, 5, 97);
+    margin-bottom: 1rem;
+}
+
+.rating-page .card-body {
+    margin-bottom: 2rem;
+}
+
+.rating-page .btn-secondary {
+    margin-top: 1rem;
+}
+
+.rating-page .btn-secondary:disabled {
+    opacity: 0.5;
+}
+
+
+/* Additional adjustments can be made based on your design preferences */
+
 
 /* SongItem Styles */
 .song-item {
@@ -205,6 +240,7 @@
     padding: 0;
 }
 
+
 .songs-list select {
     padding: 8px;
     /* Adjust as needed */
@@ -214,7 +250,7 @@
     border-radius: 4px;
     background-color: #fff;
     color: #333;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .songs-list select:hover {
