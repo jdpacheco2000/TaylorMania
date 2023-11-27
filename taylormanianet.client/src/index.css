@@ -1,116 +1,258 @@
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-/* base styles */
+/* Base Styles */
 * {
-  margin: 0;
-  font-family: "Quicksand";
-  color: #333;
+    margin: 0;
+    font-family: "Quicksand";
+    color: #333;
 }
+
+/* Navbar Styles */
 .navbar {
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  max-width: 600px;
-  margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f2f2f2;
 }
+
 .navbar h1 {
-  color: #f1356d;
+    color: #f1356d;
+    position: relative;
+    transition: text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.navbar h1:hover {
+    text-shadow: 0 0 10px rgba(114, 4, 124, 0.3);
+    box-shadow: 0 0 260px rgba(241, 53, 109, 0.5);
+}
+
+.navbar h1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(241, 53, 109, 0.5);
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar h1:hover::before {
+    transform: scaleX(1);
+}
+
+/* Navigation Links */
+.navbar-title {
+    color: #f1356d;
+    /* Other styles as needed */
+}
+
 .navbar .links {
-  margin-left: auto;
+    margin-left: auto;
 }
+
 .navbar a {
-  margin-left: 16px;
-  text-decoration: none;
-  padding: 6px;
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
 }
+
 .navbar a:hover {
-  color: #f1356d;
+    color: #f1356d;
 }
+
+/* Content Styles */
 .content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
 }
 
-/* blog previews / list */
+/* Blog Previews Styles */
 .blog-preview {
-  padding: 10px 16px;
-  margin: 20px 0;
-  border-bottom: 1px solid #fafafa;
+    padding: 10px 16px;
+    margin: 20px 0;
+    border-bottom: 1px solid #fafafa;
 }
+
 .blog-preview:hover {
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
+
 .blog-preview h2 {
-  font-size: 20px;
-  color: #f1356d;
-  margin-bottom: 8px;
+    font-size: 20px;
+    color: #f1356d;
+    margin-bottom: 8px;
 }
 
-.blog-preview a{
-  text-decoration: none;
-}
-
-/* blog details page */
+/* Blog Details Page Styles */
 .blog-details h2 {
-  font-size: 20px;
-  color: #f1356d;
-  margin-bottom: 10px;
+    font-size: 20px;
+    color: #f1356d;
+    margin-bottom: 10px;
 }
 
 .blog-details div {
-  margin: 20px 0;
+    margin: 20px 0;
 }
 
-.blog-details button {
-  background: #f1356d;
-  color: #fff;
-  border: 0;
-  padding: 8px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.author-info{
-  color:rgb(128, 5, 97);
-  font-weight: bold;
-}
-
-.blog-body{
-  text-align: justify;
-}
-
-
-/* create new blog form */
+/* Create New Blog Form Styles */
 .create {
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
 }
+
 .create label {
-  text-align: left;
-  display: block;
+    text-align: left;
+    display: block;
 }
+
 .create h2 {
-  font-size: 20px;
-  color: #f1356d;
-  margin-bottom: 30px;
+    font-size: 20px;
+    color: #f1356d;
+    margin-bottom: 30px;
 }
-.create input, .create textarea, .create select {
-  width: 100%;
-  padding: 6px 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-  display: block;
+
+.create input,
+.create textarea,
+.create select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
 }
+
 .create button {
-  background: #f1356d;
-  color: #fff;
-  border: 0;
-  padding: 8px;
-  border-radius: 8px;
-  cursor: pointer;
+    background: #f1356d;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Additional Styles */
+.author-info {
+    color: rgb(128, 5, 97);
+    font-weight: bold;
+}
+
+.blog-body {
+    text-align: justify;
+}
+
+
+/* AlbumItem Styles */
+.album-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+
+.album-item img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+/* AlbumList Styles */
+
+/* RatingPage Styles */
+.rating-page {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.rating-page h2 {
+    color:rgb(128, 5, 97);
+    margin-bottom: 10px;
+}
+
+.rating-page label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.rating-page input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* SongItem Styles */
+.song-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+/* SongsList Styles */
+.songs-list {
+    list-style: none;
+    padding: 0;
+}
+
+.songs-list select {
+    padding: 8px;
+    /* Adjust as needed */
+    font-size: 14px;
+    /* Adjust as needed */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    margin-left: 20px;
+}
+
+.songs-list select:hover {
+    border-color: #aaa;
+}
+
+.songs-list select:focus {
+    outline: none;
+    border-color: #f1356d;
+    /* Adjust as needed */
+    box-shadow: 0 0 5px rgba(241, 53, 109, 0.5);
+    /* Adjust as needed */
+}
+
+.songs-list option {
+    background-color: #fff;
+    color: #333;
+}
+
+.songs-list option:hover {
+    background-color: #f1356d;
+    /* Adjust as needed */
+    color: #fff;
+}
+
+.songs-list li {
+    margin-bottom: 10px;
+}
+
+.songs-list label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.songs-list input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
 }

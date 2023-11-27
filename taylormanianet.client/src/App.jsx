@@ -1,9 +1,11 @@
-import Navbar from './Navbar';
-import Home from './Home';
+import Navbar from './components/Navbar';
+import Home from './components/Home/Home'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Create from './Create';
-import BlogDetails from './BlogDetails';
-import NotFound from './NotFound';
+import Create from './Blog/Create';
+import BlogDetails from './Blog/BlogDetails';
+import NotFound from './components/NotFound';
+import RatingPage from './components/Ratings/RatingPage';
+import albumsData from './components/Albums/albumsData';
 
 function App() {
     return (
@@ -15,6 +17,7 @@ function App() {
                         <Route path='/' element={<Home />} />
                         <Route path='/create' element={<Create />} />
                         <Route path='/blogs/:id' element={<BlogDetails />} />
+                        <Route path="/ratings" element={<RatingPage albums={albumsData} />} />
                         <Route path='*' element={<NotFound />} />
                     </Routes>
                 </div>
