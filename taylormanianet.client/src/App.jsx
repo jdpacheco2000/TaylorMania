@@ -1,4 +1,4 @@
-import Navbar from './components/Navbar';
+import CustomNavbar from './components/CustomNavbar';
 import Home from './components/Home/Home'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Create from './components/Blog/Create';
@@ -11,7 +11,7 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <Navbar />
+                <CustomNavbar />
                 <div className='content'>
                     <Routes>
                         <Route path='/' element={<Home />} />
